@@ -79,7 +79,7 @@ List of properties
                         data-tweet-limit="${properties.tweetlimit.long}"
                     </c:if>
                     <c:if test="${not empty properties.theme}">
-                        theme="${properties.theme.string}"
+                        data-theme="${properties.theme.string}"
                     </c:if>
                     <c:if test="${not empty properties.related}">
                         data-related="${properties.related.string}"
