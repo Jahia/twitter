@@ -38,7 +38,9 @@ List of properties
 --%>
 <c:set var="properties" value="${currentNode.properties}"/>
 <div id="preview" class="preview" data-url="/settings/widgets/preview">
-    <a class="twitter-timeline"
+    <c:choose>
+        <c:when test="${!renderContext.editMode}">
+        <a class="twitter-timeline"
        data-widget-id="${currentNode.properties.widgetId.string}"
        href="https://twitter.com/twitterapi"
             <c:if test="${not empty properties.width}">
@@ -87,8 +89,13 @@ List of properties
             </c:if>
 
             >${currentNode.displayableName}</a>
-
-    <c:if test="${renderContext.editMode}">
-        <a href="https://twitter.com/settings/widgets/${currentNode.properties.widgetId.string}/edit" target="_blank"><fmt:message key="twitter.editConfig"/></a>
-    </c:if>
+    </c:when>
+    <c:otherwise>
+        <div style="(border solid 1 px black)">
+            <img src="<c:url value='${url.currentModule}/icons/jnt_twitterWidget_large.png'/>"> <strong>Twitter Widget</strong>
+            </br><fmt:message key="twitter.editMessage"/>
+            </br><a href="https://twitter.com/settings/widgets/${currentNode.properties.widgetId.string}/edit" target="_blank"><fmt:message key="twitter.editConfig"/></a>
+        </div>
+    </c:otherwise>
+    </c:choose>
 </div>
