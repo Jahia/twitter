@@ -40,22 +40,19 @@ List of properties
 <div id="preview" class="preview" data-url="/settings/widgets/preview">
     <c:choose>
         <c:when test="${!renderContext.editMode}">
-        <a class="twitter-timeline"
-       data-widget-id="${currentNode.properties.widgetId.string}"
-       href="https://twitter.com/twitterapi"
-            <c:if test="${not empty properties.width}">
-                width="${properties.width.long}"
-            </c:if>
-            <c:if test="${not empty properties.height}">
-                height="${properties.height.long}"
-            </c:if>
-            <c:if test="${not empty properties.tweetlimit}">
-                data-tweet-limit="${properties.tweetlimit.long}"
-            </c:if>
-            <c:if test="${not empty properties.linkcolor}">
-                data-link-color="${properties.linkcolor.string}"
-            </c:if>
-       data-chrome="
+            <a class="twitter-timeline"
+               data-widget-id="${currentNode.properties.widgetId.string}"
+               href="https://twitter.com/twitterapi"
+                    <c:if test="${not empty properties.width}">
+                        width="${properties.width.long}"
+                    </c:if>
+                    <c:if test="${not empty properties.height}">
+                        height="${properties.height.long}"
+                    </c:if>
+                    <c:if test="${not empty properties.linkcolor}">
+                        data-link-color="${properties.linkcolor.string}"
+                    </c:if>
+               data-chrome="
     <c:if test="${not empty properties.noheader.boolean}">
         noheader
     </c:if>
@@ -72,30 +69,33 @@ List of properties
         transparent
     </c:if>
     "
-            <c:if test="${not empty properties.bordercolor}">
-                border-color="${properties.bordercolor.string}"
-            </c:if>
-            <c:if test="${not empty properties.language}">
-                data-language="${properties.language.string}"
-            </c:if>
-            <c:if test="${not empty properties.tweetlimit}">
-                data-tweet-limit="${properties.tweetlimit.long}"
-            </c:if>
-            <c:if test="${not empty properties.related}">
-                data-related="${properties.related.string}"
-            </c:if>
-            <c:if test="${not empty properties.ariapolite}">
-                data-aria-polite="${properties.ariapolite.string}"
-            </c:if>
+                    <c:if test="${not empty properties.bordercolor}">
+                        border-color="${properties.bordercolor.string}"
+                    </c:if>
+                    <c:if test="${not empty properties.language}">
+                        data-language="${properties.language.string}"
+                    </c:if>
+                    <c:if test="${not empty properties.tweetlimit}">
+                        data-tweet-limit="${properties.tweetlimit.long}"
+                    </c:if>
+                    <c:if test="${not empty properties.theme}">
+                        theme="${properties.theme.string}"
+                    </c:if>
+                    <c:if test="${not empty properties.related}">
+                        data-related="${properties.related.string}"
+                    </c:if>
+                    <c:if test="${not empty properties.ariapolite}">
+                        data-aria-polite="${properties.ariapolite.string}"
+                    </c:if>
 
-            >${currentNode.displayableName}</a>
-    </c:when>
-    <c:otherwise>
-        <div style="(border solid 1 px black)">
-            <img src="<c:url value='${url.currentModule}/icons/jnt_twitterWidget_large.png'/>"> <strong>Twitter Widget</strong>
-            </br><fmt:message key="twitter.editMessage"/>
-            </br><a href="https://twitter.com/settings/widgets/${currentNode.properties.widgetId.string}/edit" target="_blank"><fmt:message key="twitter.editConfig"/></a>
-        </div>
-    </c:otherwise>
+                    >${currentNode.displayableName}</a>
+        </c:when>
+        <c:otherwise>
+            <div style="(border solid 1 px black)">
+                <img src="<c:url value='${url.currentModule}/icons/jnt_twitterWidget_large.png'/>"> <strong>Twitter Widget</strong>
+                </br><fmt:message key="twitter.editMessage"/>
+                </br><a href="https://twitter.com/settings/widgets/${currentNode.properties.widgetId.string}/edit" target="_blank"><fmt:message key="twitter.editConfig"/></a>
+            </div>
+        </c:otherwise>
     </c:choose>
 </div>
