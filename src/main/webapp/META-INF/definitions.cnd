@@ -1,7 +1,7 @@
 <jnt = 'http://www.jahia.org/jahia/nt/1.0'>
 <jmix = 'http://www.jahia.org/jahia/mix/1.0'>
 
-[jnt:twitterFeed]
+[jnt:twitterFeed] > jmix:droppableContent
 - userAccount (string) mandatory indexed=no
 - numberOfTweets (string, choicelist) = '5' indexed=no < '5', '10', '15', '20', '25', '30'
 - shellBackgroundColor (string) = '#1d6ab3' indexed=no
@@ -19,7 +19,7 @@
 - showHashtags (boolean) = true indexed=no
 
 
-[jnt:twitterSearch]
+[jnt:twitterSearch] > jmix:droppableContent
 - search (string) indexed=no
 - numberOfTweets (string, choicelist) = '15' indexed=no < '5', '10', '15', '20', '25', '30'
 - timeUpdate (long) = 15 indexed=no
