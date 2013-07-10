@@ -52,28 +52,12 @@ List of properties
                     <c:if test="${not empty properties.linkcolor}">
                         data-link-color="${properties.linkcolor.string}"
                     </c:if>
-               data-chrome="
-    <c:if test="${not empty properties.noheader.boolean}">
-        noheader
-    </c:if>
-    <c:if test="${not empty properties.nofooter.boolean}">
-        nofooter
-    </c:if>
-    <c:if test="${not empty properties.noborders.boolean}">
-        noborders
-    </c:if>
-    <c:if test="${not empty properties.noscrollbar.boolean}">
-        noscrollbar
-    </c:if>
-    <c:if test="${not empty properties.transparent.boolean}">
-        transparent
-    </c:if>
-    "
+               data-chrome="<c:if test="${properties.noheader.boolean}">noheader </c:if> <c:if test="${properties.nofooter.boolean}">nofooter </c:if><c:if test="${properties.noborders.boolean}">noborders </c:if><c:if test="${properties.noscrollbar.boolean}">noscrollbar </c:if><c:if test="${properties.transparent.boolean}">transparent </c:if>"
                     <c:if test="${not empty properties.bordercolor}">
                         border-color="${properties.bordercolor.string}"
                     </c:if>
                     <c:if test="${not empty properties.language}">
-                        data-language="${properties.language.string}"
+                        lang="${properties.language.string}"
                     </c:if>
                     <c:if test="${not empty properties.tweetlimit}">
                         data-tweet-limit="${properties.tweetlimit.long}"
