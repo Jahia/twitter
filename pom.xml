@@ -62,6 +62,9 @@
     <url>scm:git:git@github.com:Jahia/twitter.git</url>
     <tag>HEAD</tag>
   </scm>
+  <properties>
+    <jahia-module-signature>MCwCFHw7WIz722IZ7Y1Kradffg75EZ+IAhQUTMWQxKQ6pVIXiAunyq+E4tBRWQ==</jahia-module-signature>
+  </properties>
   <repositories>
     <repository>
       <releases>
