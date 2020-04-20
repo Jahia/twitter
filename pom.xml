@@ -49,10 +49,10 @@
   <parent>
     <groupId>org.jahia.modules</groupId>
     <artifactId>jahia-modules</artifactId>
-    <version>7.0.0.0</version>
+    <version>8.0.0.0-SNAPSHOT</version>
   </parent>
   <artifactId>twitter</artifactId>
-  <version>2.0.3-SNAPSHOT</version>
+  <version>3.0.0-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>Jahia Twitter</name>
   <description>These are the custom module (Jahia Twitter) for running on a Jahia server.</description>
@@ -62,6 +62,9 @@
     <url>scm:git:git@github.com:Jahia/twitter.git</url>
     <tag>HEAD</tag>
   </scm>
+  <properties>
+    <jahia-module-signature>MCwCFHw7WIz722IZ7Y1Kradffg75EZ+IAhQUTMWQxKQ6pVIXiAunyq+E4tBRWQ==</jahia-module-signature>
+  </properties>
   <repositories>
     <repository>
       <releases>
